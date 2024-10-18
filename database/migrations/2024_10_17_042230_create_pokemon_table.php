@@ -16,13 +16,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('species');
             $table->string('primary_type');
-            $table->decimal('weight', 8, 2);  
-            $table->decimal('height', 8,2); 
-            $table->integer('hp');  
-            $table->integer('attack');  
-            $table->integer('defense');  
-            $table->boolean('is_legendary')->default(false);  
-            $table->string('photo')->nullable();  
+            $table->decimal('weight', 8, 2);
+            $table->decimal('height', 8,2);
+            $table->integer('hp');
+            $table->integer('attack');
+            $table->integer('defense');
+            $table->boolean('is_legendary')->default(false);
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
