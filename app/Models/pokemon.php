@@ -10,7 +10,6 @@ class pokemon extends Model
 {
     use HasFactory;
     protected $filable  = [
-        'id',
         'name',
         'species',
         'primary_type',
@@ -29,8 +28,15 @@ class pokemon extends Model
     ];
     public function getPhotoUrlAttribute()
     {
-        if(filter_var($this->photo, FILTER_VALIDATE_URL)){
+        if (filter_var($this->photo, FILTER_VALIDATE_URL)) {
             return $this->photo;
-    }
-    return $this->photo ? Storage::url($this->photo) : null;
-}}
+        }
+        if (str_starts_with($this->photo, 'public/')) {
+            return asset(str_replace('public/', '', $this->photo));
+        }
+        if ($this->photo) {
+            return Storage::url($this->photo);
+        }
+        return 'https://placehold.co/600x400';
+}
+}

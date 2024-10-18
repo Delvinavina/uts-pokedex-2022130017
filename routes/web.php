@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\PokedexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PokemonController;
+use App\Models\Pokemon;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +17,7 @@ use App\Http\Controllers\PokemonController;
 |
 */
 
-Route::get('/', function () {
-    return view('pokedex');
-})->name('pokedex');;
+Route::get('/', [PokedexController::class, 'index'])
+->name('pokedex');
 
-Route::post('/pokemon', [PokemonController::class, 'store'])->name('pokemon.store');
+Route::resource('pokemon', PokemonController::class);

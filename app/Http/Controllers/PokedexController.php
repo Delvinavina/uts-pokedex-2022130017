@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pokemon;
+
 class PokedexController extends Controller
 {
     /**
@@ -9,7 +11,8 @@ class PokedexController extends Controller
      */
     public function index()
     {
-        $pokemon = pokemon::paginate(9);
+        $pokemon = Pokemon::paginate(9);
+
         return view('pokedex', compact('pokemon'));
     }
 }
