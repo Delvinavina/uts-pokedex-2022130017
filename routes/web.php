@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('pokedex');
 })->name('pokedex');;
 
-Route::get('/', [PokedexController::class, 'index']);
+Route::post('/pokemon', [PokemonController::class, 'store'])->name('pokemon.store');
