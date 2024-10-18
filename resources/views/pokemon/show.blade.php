@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', "Pokemon: $pokemon->name")
+@section('title', "pokemon: $pokemon->name")
 
 @section('body')
 @if ($pokemon->photo)

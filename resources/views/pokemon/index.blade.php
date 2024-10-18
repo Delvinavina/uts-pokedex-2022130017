@@ -54,7 +54,7 @@ extends('layouts.template')
                     <a href="{{ route('pokemon.edit' , $pokemon)}}" class="btn btn-primary btn-sm">
                         Edit
                     </a>
-                    <form action= "{{ route('pokemon.destroy' , $pokemon)" method="POST" class="d-inline-block">
+                    <form action= "{{ route( pokemon.destroy , $pokemon)" method="POST" class="d-inline-block">
                             @method('DELETE')
                             @csrf
 

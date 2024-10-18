@@ -10,6 +10,7 @@ class pokemon extends Model
 {
     use HasFactory;
     protected $filable  = [
+        'id',
         'name',
         'species',
         'primary_type',

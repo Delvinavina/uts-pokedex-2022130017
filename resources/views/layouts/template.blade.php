@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('pokedex') }}">pokemon</a>
+            <a class="navbar-brand" href="{{ route('pokedex') }}">Pokedex</a>
             <button class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
