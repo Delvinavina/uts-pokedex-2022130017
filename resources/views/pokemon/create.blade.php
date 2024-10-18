@@ -5,6 +5,10 @@ section('content')
     <form action="{{ route('pokemon.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
+            <label for="id">id</label>
+            <input type="text" class="form-control" id="id" name="id" required maxlength="255">
+        </div>
+        <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" name="name" required maxlength="255">
         </div>

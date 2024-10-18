@@ -35,7 +35,7 @@ class PokemonController extends Controller
         $validated = $request->validated();
 
         if ($request->hasFile('photo')) {
-            $path = $request->file('photo')->store('pokemon_photo', 'public');
+            $path = $request->file('photo')->store('photo', 'public');
             $validated['photo'] = $path;
         }
 
