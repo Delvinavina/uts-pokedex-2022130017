@@ -40,27 +40,29 @@
 
         <div class="form-group">
             <label for="weight">weight</label>
-            <input type="text" class="form-control" id="weight"  placeholder="weight" name="weight" value="{{ old('weight' , $pokemon->weight) }}">
+            <input type="number" class="form-control" id="weight"  placeholder="weight" name="weight" value="{{ old('weight' , $pokemon->weight) }}">
         </div>
         <div class="form-group">
             <label for="height">height</label>
-            <input type="text" class="form-control" id="height"  placeholder="height" name="height" value="{{ old('height' , $pokemon->height) }}">
+            <input type="number" class="form-control" id="height"  placeholder="height" name="height" value="{{ old('height' , $pokemon->height) }}">
         </div>
         <div class="form-group">
             <label for="hp">hp</label>
-            <input type="text" class="form-control" id="hp"  placeholder="hp" name="hp" value="{{ old('hp' , $pokemon->hp) }}">
+            <input type="number" class="form-control" id="hp"  placeholder="hp" name="hp" value="{{ old('hp' , $pokemon->hp) }}">
         </div>
         <div class="form-group">
             <label for="attack">attack</label>
-            <input type="text" class="form-control" id="attack"  placeholder="attack" name="attack" value="{{ old('attack' , $pokemon->attack) }}">
+            <input type="number" class="form-control" id="attack"  placeholder="attack" name="attack" value="{{ old('attack' , $pokemon->attack) }}">
         </div>
         <div class="form-group">
             <label for="defense">defense</label>
-            <input type="text" class="form-control" id="defense"  placeholder="defense" name="defense" value="{{ old('defense' , $pokemon->defense) }}">
+            <input type="number" class="form-control" id="defense"  placeholder="defense" name="defense" value="{{ old('defense' , $pokemon->defense) }}">
         </div>
         <div class="form-group">
             <label for="is_legendary">is_legendary</label>
-            <input type="text" class="form-control" id="is_legendary"  placeholder="is_legendary" name="is_legendary" value="{{ old('is_legendary' , $pokemon->is_legendary) }}">
+            <input type="checkbox" class="form-control" id="is_legendary"  placeholder="is_legendary" name="is_legendary" value="{{ old('is_legendary' , $pokemon->is_legendary) }}">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
         </div>
 
         <div class="form-group">
