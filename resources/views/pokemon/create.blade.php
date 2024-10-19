@@ -7,7 +7,7 @@
             @csrf
 
             {{-- <div class="form-group mb-2">
-                <label for="id">ID</label>
+                <label for="id">Id</label>
                 <input type="text" class="form-control" id="id" name="id" required maxlength="255"
                     placeholder="Enter Pokemon ID">
             </div> --}}
