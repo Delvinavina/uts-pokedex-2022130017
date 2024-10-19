@@ -31,9 +31,7 @@
 
                     </ul>
 
-                   
                     <ul class="navbar-nav ms-auto">
-                       
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
