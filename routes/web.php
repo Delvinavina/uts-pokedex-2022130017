@@ -21,3 +21,7 @@ Route::get('/', [PokedexController::class, 'index'])
 ->name('pokedex');
 
 Route::resource('pokemon', PokemonController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

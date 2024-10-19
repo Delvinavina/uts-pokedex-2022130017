@@ -17,11 +17,13 @@
                 @foreach ($pokemon as $p)
                     <div class="col">
                         <div class="card h-100">
-                            <img src="{{ $p->photo_url }}" class="img-fluid card-img-top" alt="{{ $p->name }}" height="100">
+                            <img src="{{ $p->photo_url }}" class="img-fluid card-img-top px-4 py-4" alt="{{ $p->name }}" height="100">
                             <div class="card-body">
-                                <h5 class="card-title">#{{ $p->id }} {{ $p->name }}</h5>
-                                <p class="card-text">Species: {{ $p->species }}</p>
-                                <p class="card-text">Type: {{ $p->primary_type }}</p>
+                                <p class="card-text mb-0 pb-0">#{{ str_pad($p->id, 4, '0', STR_PAD_LEFT) }}</p>
+                                <h4 class="card-title fw-bold">{{ $p->name }}</h4>
+                                {{-- <p class="card-text">Species: {{ $p->species }}</p>
+                                <p class="card-text">Type: {{ $p->primary_type }}</p> --}}
+                                <h5 class="card-text"><span class="badge bg-success">{{ $p->primary_type }}</span></h5>
                             </div>
                         </div>
                     </div>
