@@ -89,7 +89,6 @@ class PokemonController extends Controller
             'Rock', 'Ghost', 'Ice', 'Dragon', 'Dark', 'Steel', 'Flying'
         ];
 
-        // dd($pokemon->name);
 
         return view('pokemon.edit', compact('pokemon', 'types'));
     }

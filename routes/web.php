@@ -4,6 +4,7 @@ use App\Http\Controllers\PokedexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PokemonController;
 use App\Models\Pokemon;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -20,7 +21,9 @@ use App\Models\Pokemon;
 Route::get('/', [PokedexController::class, 'index'])
 ->name('pokedex');
 
-Route::resource('pokemon', PokemonController::class);
+Route::middleware('auth')->group(function () {
+    Route::resource('pokemon', PokemonController::class);
+});
 
 Auth::routes();
 
