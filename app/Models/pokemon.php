@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class Pokemon extends Model
 {
     use HasFactory;
-    protected $filable  = [
+    protected $fillable  = [
         'name',
         'species',
         'primary_type',
